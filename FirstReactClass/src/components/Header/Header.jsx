@@ -1,7 +1,13 @@
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { IoMenu } from "react-icons/io5";
+import {Link} from "react-router-dom"
+import { useState } from "react";
+
 const Header = () => {
+    const [name, setName] = useState("fatai Munirat")
+    const [email, setEmail] = useState ("moon@gmail.com")
+    
     return (
         <div>
             <header className="header">
@@ -11,13 +17,16 @@ const Header = () => {
                     </div>
 
                     <nav className="navBar">
-                        <a>Home</a>
-                        <a>Service</a>
-                        <a>About</a>
-                        <a>Blog</a>
-                        <a>Contact</a>
+                    <Link style={{textDecoration:"none", color:"black"}} to="/">
+                    <span>Home</span>
+                        </Link> 
+                        <Link style={{textDecoration:"none", color:"black"}} to="/services"><span>Service</span></Link>
+                        <Link style={{textDecoration:"none", color:"black"}} to="/about"><span>About</span></Link>
+                        <Link style={{textDecoration:"none", color:"black"}}><span>Blog</span></Link>
+                        <Link style={{textDecoration:"none", color:"black"}}><span>Contact</span></Link>
                     </nav>
                     <div className="holder" >
+                        {name} {email}
                         <MdOutlineShoppingCart />
 
                         <div className="iconInput">
