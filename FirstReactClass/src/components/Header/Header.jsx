@@ -23,7 +23,7 @@ const Header = () => {
                         <Link style={{textDecoration:"none", color:"black"}} to="/services"><span>Service</span></Link>
                         <Link style={{textDecoration:"none", color:"black"}} to="/about"><span>About</span></Link>
                         <Link style={{textDecoration:"none", color:"black"}}><span>Blog</span></Link>
-                        <Link style={{textDecoration:"none", color:"black"}}><span>Contact</span></Link>
+                        <Link style={{textDecoration:"none", color:"black"}} to="/contact"  ><span>Contact</span></Link>
                     </nav>
                     <div className="holder" >
                         {name} {email}
